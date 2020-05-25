@@ -109,16 +109,10 @@ plt.hist(temp, histtype="barstacked", bins=16)
 plt.show()
 
 
-train["Sex"][train["Sex"] == "male"] = 0
-train["Sex"][train["Sex"] == "female"] = 1
-train["Embarked"][train["Embarked"] == "S"] = 0
-train["Embarked"][train["Embarked"] == "C"] = 1
-train["Embarked"][train["Embarked"] == "Q"] = 2
-train.head(10)
-
 # カテゴリデータを数値化
 df_train["Sex"][df_train["Sex"] == "male"] = 0
 df_train["Sex"][df_train["Sex"] == "female"] = 1
 df_train["Embarked"][df_train["Embarked"] == "S"] = 0
 df_train["Embarked"][df_train["Embarked"] == "C"] = 1
 df_train["Embarked"][df_train["Embarked"] == "Q"] = 2
+print(df_train.head(10))
